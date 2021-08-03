@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Create Azure VM</title>
+        <link th:href="@{/css/main.css}" href="../static/css/main.css" media="all"
+              rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Create Azure VM</h1>
+        <div class="resource-info">
+            <form action="#" th:action="@{/vm}" th:object="${virtualMachine}" method="post">
+                <div th:replace="fragments/fields :: common-fields"></div>
+
+                <div class="input-field">
+                    <input type="submit" value="Submit">
+                </div>
+
+                <div class="input-field">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+
+        <div>
+            <a th:href="@{/}">Go back</a>
+        </div>
+    </body>
+</html>

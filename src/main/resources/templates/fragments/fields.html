@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+    </head>
+    <body>
+        <div th:fragment="common-fields">
+            <div class="input-field">
+                <label for="subscriptionId">Subscription ID</label>
+                <input type="text" th:field="*{subscriptionId}">
+                <ul>
+                    <li th:each="err : ${#fields.errors('subscriptionId')}" th:text="${err}" class="error"></li>
+                </ul>
+            </div>
+
+            <div class="input-field">
+                <label for="clientId">Client ID</label>
+                <input type="text" th:field="*{clientId}">
+                <ul>
+                    <li th:each="err : ${#fields.errors('clientId')}" th:text="${err}" class="error"></li>
+                </ul>
+            </div>
+
+            <div class="input-field">
+                <label for="clientSecret">Client Secret</label>
+                <input type="text" th:field="*{clientSecret}">
+                <ul>
+                    <li th:each="err : ${#fields.errors('clientSecret')}" th:text="${err}" class="error"></li>
+                </ul>
+            </div>
+
+            <div class="input-field">
+                <label for="tenantId">Tenant ID</label>
+                <input type="text" th:field="*{tenantId}">
+                <ul>
+                    <li th:each="err : ${#fields.errors('tenantId')}" th:text="${err}" class="error"></li>
+                </ul>
+            </div>
+
+            <div class="input-field">
+                <label for="resourceName">Resource Name</label>
+                <input type="text" th:field="*{resourceName}">
+                <ul>
+                    <li th:each="err : ${#fields.errors('resourceName')}" th:text="${err}" class="error"></li>
+                </ul>
+            </div>
+
+            <div class="input-field">
+                <label for="resourceGroup">Resource Group</label>
+                <input type="text" th:field="*{resourceGroup}">
+                <ul>
+                    <li th:each="err : ${#fields.errors('resourceGroup')}" th:text="${err}" class="error"></li>
+                </ul>
+            </div>
+
+            <div class="input-field">
+                <label for="rootUsername">Root username</label>
+                <input type="text" th:field="*{rootUsername}">
+                <ul>
+                    <li th:each="err : ${#fields.errors('rootUsername')}" th:text="${err}" class="error"></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

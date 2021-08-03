@@ -1,0 +1,17 @@
+.resource-info {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem;
+}
+
+.input-field {
+    margin: 1rem;
+}
+
+input {
+    width: 100%;
+}
+
+.error {
+    color: red;
+}
